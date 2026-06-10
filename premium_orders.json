@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "customer_id": 1,
+    "status": "Оплачен",
+    "total_amount": 92490.0,
+    "created_at": "2026-06-08T14:30:00"
+  }
+]
