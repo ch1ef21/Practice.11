@@ -3,6 +3,7 @@ import sys
 
 from modules.porter import export_data, import_data
 from modules.query import execute_query
+from modules.seeder import seed_database
 from modules.status import show_status
 
 
@@ -53,6 +54,20 @@ def main():
         "-i", "--input", required=True, help="Путь к файлу CSV или JSON для импорта"
     )
 
+    seed_parser = subparsers.add_parser(
+        "seed", help="Заполнить БД демонстрационными данными (Faker)"
+    )
+    seed_parser.add_argument(
+        "-c",
+        "--customers",
+        type=int,
+        default=0,
+        help="Количество генерируемых клиентов",
+    )
+    seed_parser.add_argument(
+        "-o", "--orders", type=int, default=0, help="Количество генерируемых заказов"
+    )
+
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit(0)
@@ -72,6 +87,8 @@ def main():
         )
     elif args.command == "import":
         import_data(table_name=args.table, file_path=args.input)
+    elif args.command == "seed":
+        seed_database(num_customers=args.customers, num_orders=args.orders)
 
 
 if __name__ == "__main__":
