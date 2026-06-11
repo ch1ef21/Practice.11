@@ -54,7 +54,7 @@ def show_status():
 
         table_stats.sort(key=lambda x: x[1], reverse=True)
 
-        rich_table = Table(title="\n📊 Статистика таблиц базы данных")
+        rich_table = Table(title="\n Статистика таблиц базы данных")
         rich_table.add_column("Имя таблицы", style="cyan")
         rich_table.add_column("Количество строк", justify="right", style="magenta")
         rich_table.add_column("Размер на диске", justify="right", style="green")
@@ -67,9 +67,7 @@ def show_status():
     except Exception as e:
         console.print(f"[red]Не удалось получить статистику таблиц: {e}[/red]")
 
-    console.print(
-        "\n[bold yellow]🛍️ Аналитика интернет-магазина (ShopDB):[/bold yellow]"
-    )
+    console.print("\n[bold yellow Аналитика интернет-магазина (ShopDB):[/bold yellow]")
     try:
         cur.execute(
             "SELECT COUNT(*), COALESCE(SUM(total_amount), 0) FROM orders WHERE status != 'Отменен';"
@@ -98,7 +96,7 @@ def show_status():
 
         if low_stock:
             low_stock_table = Table(
-                title="\n⚠️ Внимание! Товары на исходе (критический остаток)"
+                title="\n Внимание! Товары на исходе (критический остаток)"
             )
             low_stock_table.add_column("Товар", style="yellow")
             low_stock_table.add_column(
