@@ -46,12 +46,8 @@ def export_data(table_name=None, query_text=None, file_format="csv", output_file
         file_format = file_format.lower()
 
         if file_format == "csv":
-            with open(
-                output_file, "w", newline="", encoding="utf-8-sig"
-            ) as f:  # utf-8-sig для Excel на Windows
-                writer = csv.writer(
-                    f, delimiter=";"
-                )  # Используем ';' для локализованного Excel
+            with open(output_file, "w", newline="", encoding="utf-8-sig") as f:
+                writer = csv.writer(f, delimiter=";")
                 writer.writerow(colnames)
                 writer.writerows(rows)
             console.print(
@@ -67,7 +63,7 @@ def export_data(table_name=None, query_text=None, file_format="csv", output_file
                         val = val.isoformat()
                     elif (
                         hasattr(val, "to_eng_string") or type(val).__name__ == "Decimal"
-                    ):  # Для Decimal
+                    ):
                         val = float(val)
                     row_dict[col] = val
                 data.append(row_dict)

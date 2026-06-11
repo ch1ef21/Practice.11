@@ -154,7 +154,6 @@ def create_backup(output_file=None):
                         elif isinstance(val, (datetime.datetime, datetime.date)):
                             values_formatted.append(f"'{val.isoformat()}'")
                         else:
-                            # Эскейпим одинарные кавычки для безопасности SQL
                             escaped_str = str(val).replace("'", "''")
                             values_formatted.append(f"'{escaped_str}'")
 
