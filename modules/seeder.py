@@ -30,7 +30,7 @@ def seed_database(num_customers=0, num_orders=0):
             first_name = fake.first_name()
             last_name = fake.last_name()
             email = fake.unique.email()
-            phone = fake.phone_number()[:20]  # обрезаем до длины поля
+            phone = fake.phone_number()[:20]
             address = fake.address().replace("\n", ", ")
             customers_data.append((first_name, last_name, email, phone, address))
 
@@ -65,7 +65,7 @@ def seed_database(num_customers=0, num_orders=0):
             return
 
         cur.execute("SELECT id, price FROM products;")
-        products = cur.fetchall()  # список кортежей (id, price)
+        products = cur.fetchall()
 
         if not products:
             console.print(
