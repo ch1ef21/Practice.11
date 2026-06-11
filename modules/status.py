@@ -67,7 +67,7 @@ def show_status():
     except Exception as e:
         console.print(f"[red]Не удалось получить статистику таблиц: {e}[/red]")
 
-    console.print("\n[bold yellow Аналитика интернет-магазина (ShopDB):[/bold yellow]")
+    console.print("\n[bold yellow] Аналитика интернет-магазина (ShopDB):[/bold yellow]")
     try:
         cur.execute(
             "SELECT COUNT(*), COALESCE(SUM(total_amount), 0) FROM orders WHERE status != 'Отменен';"
