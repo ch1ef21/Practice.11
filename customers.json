@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "first_name": "Александр",
+    "last_name": "Петров",
+    "email": "petrov.alex@email.com",
+    "phone": "+79991234567",
+    "address": "г. Москва, ул. Ленина, д. 10, кв. 42",
+    "created_at": "2026-06-10T16:17:59.338785"
+  },
+  {
+    "id": 2,
+    "first_name": "Мария",
+    "last_name": "Иванова",
+    "email": "ivanova.maria@email.com",
+    "phone": "+79997654321",
+    "address": "г. Санкт-Петербург, Невский пр., д. 5, кв. 12",
+    "created_at": "2026-06-10T16:17:59.338785"
+  },
+  {
+    "id": 3,
+    "first_name": "Дмитрий",
+    "last_name": "Смирнов",
+    "email": "smirnov.dima@email.com",
+    "phone": "+79883332211",
+    "address": "г. Новосибирск, ул. Кирова, д. 50, кв. 3",
+    "created_at": "2026-06-10T16:17:59.338785"
+  },
+  {
+    "id": 4,
+    "first_name": "Елена",
+    "last_name": "Кузнецова",
+    "email": "kuznec.elena@email.com",
+    "phone": "+79004445566",
+    "address": "г. Екатеринбург, ул. Малышева, д. 25, кв. 115",
+    "created_at": "2026-06-10T16:17:59.338785"
+  },
+  {
+    "id": 5,
+    "first_name": "Станислав",
+    "last_name": "Кудрявцев",
+    "email": "evdokim1987@example.net",
+    "phone": "8 054 532 26 72",
+    "address": "г. Верхоянск, ул. Терешковой, д. 8/3 стр. 562, 930691",
+    "created_at": "2026-06-10T18:03:28.810882"
+  },
+  {
+    "id": 6,
+    "first_name": "Николай",
+    "last_name": "Шубина",
+    "email": "marfa75@example.net",
+    "phone": "+71210537740",
+    "address": "ст. Стрежевой, пер. Алтайский, д. 43, 390040",
+    "created_at": "2026-06-10T18:03:56.366206"
+  },
+  {
+    "id": 7,
+    "first_name": "Эрнст",
+    "last_name": "Игнатьева",
+    "email": "cveselov@example.org",
+    "phone": "80675461942",
+    "address": "к. Тулун, пер. Лунный, д. 9/6 к. 1, 221025",
+    "created_at": "2026-06-10T18:03:56.366206"
+  }
+]
